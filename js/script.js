@@ -79,8 +79,32 @@ for (let i = 0 ; i<arrayTeamPerson.length ; i++){
     `
 }
 
+//recupero bottone dall'html
+const btnAdd = document.getElementById("add");
+console.log(btnAdd);
+
+btnAdd.addEventListener("click" , function(){
+    const userInputName = prompt("inserisci il nome del nuovo membro");
+    const userInputRole = prompt("Inserisci Il ruolo del nuovo membro");
+    const userInputImage = "https://picsum.photos/200/200";
+    const newMember ={
+        name : userInputName,
+        role : userInputRole,
+        image : userInputImage
+    }
+    arrayTeamPerson.push(newMember);
+    teamRow.innerHTML += `
+    <div class="card">
+        <img src="${newMember.image}" alt="">
+        <h2 class="name">${newMember.name}</h2>
+        <p class="role">${newMember.role}</p>
+    </div>
+    `
+})
 
 
+
+//Funzione per richiedere all'utente nuovi membri 
 
 
 

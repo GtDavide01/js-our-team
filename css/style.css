@@ -28,7 +28,7 @@ body{
     justify-content: center;
 }
 .card{
-    width: calc(100% / 3 -60px);
+    width: calc(100% / 3 - 60px);
     margin: 10px 20px;
     background-color: #aab6fe;
 }
